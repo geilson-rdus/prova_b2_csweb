@@ -43,7 +43,7 @@ function sorteiaCor(){
     console.log("A cor sorteada foi " + corSelecionada)
 }
 
-/* A função main ela é responsável por rodar a função sorteiaCor, que por sua vez chama todas as outras funções */
+/* A função main é responsável por rodar a função sorteiaCor, que por sua vez chama todas as outras funções */
 
 function main(){
     sorteiaCor()
