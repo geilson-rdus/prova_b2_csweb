@@ -1,13 +1,20 @@
-function getColors(){
+/* A função criaVetorCores é responsável por ler as cores da página e inserir todas num vetor, todas as cores com nome em letra minuscula, o console.log está ali para demonstrar que as cores foram inseridas
+com letra minuscula*/
+
+function criaVetorCores(){
     const vetorCores = []
 
     for(let i = 1; i <= 148; i++){
         const colorName = document.querySelector(`#box${i} > span > a`).innerText.toLowerCase(); vetorCores.push(colorName)} 
 
+    console.log(vetorCores)
+
     return vetorCores;
 }
 
-function selectColors(quantidade, vetorCores){
+/* A função selecionaCores sorteia aleatoriamente 10 cores do vetor criado em criaVetorCores */
+
+function selecionaCores(quantidade, vetorCores){
 
     let vetorSelecionados = []
 
@@ -22,12 +29,22 @@ function selectColors(quantidade, vetorCores){
         vetorSelecionados = [...vetorSelecionados, ...cor_selecionada]
     }
 
+    console.log(vetorSelecionados)
+
     return vetorSelecionados
 }
 
-function selectCor(){
-    const vetorCores = selectColors(10, getColors())
+/* A função sorteiaCor faz sorteia de uma cor presente no vetor criado em selecionaCores e imprime no console do navegador */
+
+function sorteiaCor(){
+    const vetorCores = selecionaCores(10, criaVetorCores())
     let indice = Math.floor(Math.random()*vetorCores.length)
     let corSelecionada = vetorCores.splice(indice, 1)
-    console.log(corSelecionada)
+    console.log("A cor sorteada foi " + corSelecionada)
+}
+
+/* A função main ela é responsável por rodar a função sorteiaCor, que por sua vez chama todas as outras funções */
+
+function main(){
+    sorteiaCor()
 }
