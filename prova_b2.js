@@ -1,4 +1,5 @@
-/* A função criaVetorCores é responsável por ler as cores da página e inserir todas num vetor, todas as cores com nome em letra minuscula, o console.log está ali para demonstrar que as cores foram inseridas
+/* Respondendo a questão 1:
+A função criaVetorCores é responsável por ler as cores da página e inserir todas num vetor, todas as cores com nome em letra minuscula, o console.log está ali para demonstrar que as cores foram inseridas
 com letra minuscula*/
 
 function criaVetorCores(){
@@ -12,7 +13,8 @@ function criaVetorCores(){
     return vetorCores;
 }
 
-/* A função selecionaCores sorteia aleatoriamente 10 cores do vetor criado em criaVetorCores */
+/* Respondendo a questão 2:
+A função selecionaCores sorteia aleatoriamente 10 cores do vetor criado em criaVetorCores */
 
 function selecionaCores(quantidade, vetorCores){
 
@@ -34,7 +36,8 @@ function selecionaCores(quantidade, vetorCores){
     return vetorSelecionados
 }
 
-/* A função sorteiaCor faz sorteio de uma cor presente no vetor criado em selecionaCores e imprime no console do navegador */
+/* Respondendo a questão 3:
+A função sorteiaCor faz sorteio de uma cor presente no vetor criado em selecionaCores e imprime no console do navegador */
 
 function sorteiaCor(){
     const vetorCores = selecionaCores(10, criaVetorCores())
