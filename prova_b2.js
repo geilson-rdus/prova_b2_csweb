@@ -34,7 +34,7 @@ function selecionaCores(quantidade, vetorCores){
     return vetorSelecionados
 }
 
-/* A função sorteiaCor faz sorteia de uma cor presente no vetor criado em selecionaCores e imprime no console do navegador */
+/* A função sorteiaCor faz sorteio de uma cor presente no vetor criado em selecionaCores e imprime no console do navegador */
 
 function sorteiaCor(){
     const vetorCores = selecionaCores(10, criaVetorCores())
